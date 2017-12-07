@@ -11,20 +11,18 @@ tags:
  - Functional
 ---
 
-[中文版](./README.zh-CN.md)
+[English](./README.md)
 
 ## Also known as
 Action, Transaction
 
-## Intent
-Encapsulate a request as an object, thereby letting you
-parameterize clients with different requests, queue or log requests, and
-support undoable operations.
+## 定义
+将一个请求封装成一个对象，从而让你使用不同的请求把客户端参数化，对请求排队或者记录请求日志，可以提供命令的撤销和恢复功能。
 
 ![alt text](./etc/command.png "Command")
 
-## Applicability
-Use the Command pattern when you want to
+## 适用场景
+命令模式适用场景：
 
 * parameterize objects by an action to perform. You can express such parameterization in a procedural language with a callback function, that is, a function that's registered somewhere to be called at a later point. Commands are an object-oriented replacement for callbacks.
 * specify, queue, and execute requests at different times. A Command object can have a lifetime independent of the original request. If the receiver of a request can be represented in an address space-independent way, then you can transfer a command object for the request to a different process and fulfill the request there
